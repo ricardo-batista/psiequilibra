@@ -7,45 +7,21 @@
 </head>
 
 <style>
-    body {
-        color: #494f49;
-        font-family: 'Tahoma', sans-serif;
-        text-align: center;
-    }
+    @font-face { font-family: Cabin; src: url('fonts/cabin-regular-ttf'); } 
+    @font-face { font-family: Cabin; font-weight: bold; src: url('fonts/cabin-medium-ttf'); } 
 
-    .containerLogo {
-        margin-top: 40px;
-    }
-
-    .imageLogo {
-        width: 100%; 
-        max-width: 800px; 
-        display: block; 
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .titleLogo {
-        margin-top: 40px;
-        font-weight: bold;
-        font-size: 3em;
-    }
-
-    .container {
-      display: grid;
-      align-items: center; 
-      grid-template-columns: 1fr 1fr 1fr;
-      column-gap: 5px;
-    }
-
-    img {
-      max-width: 100%;
-      max-height:100%;
-    }
-
-    .text {
-      font-size: 70px;
-    }
+    body { color: #494f49; font-family: 'Cabin', sans-serif; text-align: center; }
+    h1 { font-size: 2.7em; }
+    h2 { font-size: 2.5em; }
+    h3 { font-weight: bold; font-size: 1.5em; }
+    p { font-size: 1.2em; }
+    .containerLogo { margin-top: 40px; }
+    .imageLogo { width: 100%; max-width: 1024px; display: block; margin-left: auto; margin-right: auto; }
+    .sectionContainer { display: grid; grid-template-columns: 1fr 1fr 1fr; column-gap: 5px; }
+    .sectionImage { max-width: 500px; }
+    .titleText { margin-left: 30%; margin-right: 30% }
+    .regularText { text-align: left; }
+    .sectionText { text-align: left; }
 </style>
 
 <body>
@@ -58,35 +34,57 @@
 
     <div></div>
 
-    <div class="titleLogo">
-      Naturalmente, consigo!
+    <div>
+      <h1>Naturalmente, consigo!</h1>
     </div>
 
     <div class="containerLogo">
         <img src="images/meditacao.jpeg" class="imageLogo" />
     </div>
 
-    <div style="text-align: center; margin-top: 40px; color: #494f49; font: bold 1em 'Tahoma', sans-serif">
-      Acreditamos que devemos olhar para cada pessoa como um todo. Um Ser Humano, nas suas várias partes, mas que só poderá encontrar o seu bem-estar, num equilíbrio psicobiofisiológico.
+    <br>
+
+    <div class="titleText">
+      <h3>Acreditamos que devemos olhar para cada pessoa como um todo. Um Ser Humano, nas suas várias partes, mas que só poderá encontrar o seu bem-estar, num equilíbrio psicobiofisiológico.</h3>
+      <p>Com respeito pela humanidade de cada um, e proporcionando um ambiente seguro, faz igualmente parte da nossa prática, respeitar a natureza humana, procurando respostas, dentro do possível, o mais naturais e em harmonia com o nosso corpo.</p>
+      <p>É igualmente fundamental para nós atuarmos em conjunto, seja através de parceiros locais, quer através de parcerias com outras clínicas, que consideramos especialistas na sua prática e e que possam complementar os nossos serviços.</p>
     </div>
 
-    <div style="text-align: center; margin-top: 40px; color: #494f49; font: bold 0.8em 'Tahoma', sans-serif">
-      Com respeito pela humanidade de cada um, e proporcionando um ambiente seguro, faz igualmente parte da nossa prática, respeitar a natureza humana, procurando respostas, dentro do possível, o mais naturais e em harmonia com o nosso corpo.
-
-      É igualmente fundamental para nós atuarmos em conjunto, seja através de parceiros locais, quer através de parcerias com outras clínicas, que consideramos especialistas na sua prática e e que possam complementar os nossos serviços.
-    </div>
-
-    <div class="container">
-        <div class="image">
-          <img src="images/meditacao.jpeg">
+    <div class="sectionContainer">
+        <div>
+          <img src="images/empatia.jpeg" class="sectionImage">
         </div>
-        <div class="text">
-          <h1>Psicologia</h1>
+        <div class="sectionText">
+          <h2>Psicologia</h2>
           As nossas consultas visam ir de encontro às necessidades apresentadas por cada pessoa, pretendendo não apenas atuar numa vertente remediativa, mas igualmente proporcionando um espaço de prevenção, potenciando as qualidades e competências de cada pessoa.
 
           Neste sentido, os nossos terapeutas trabalham num contexto multidisciplinar, combinando saberes.
         </div>
       </div>
+
+      <div class="sectionContainer">
+        <div>
+          <img src="images/margarida.jpeg" class="sectionImage">
+        </div>
+        <div class="sectionText">
+          <h2>Saúde Integrativa</h2>
+          Num conceito de Equilíbrio, a Saúde Integrativa vem dar o seu contributo na visão de um corpo como um só, analisando e intervindo no bem-estar de cada indivíduo, respeitando a sua especificidade e o seu equilíbrio no seu contexto.
+
+          A saúde integrativa apresenta-se nas suas vertentes de psicomotricidade, babyoga e playoga, nutrição e terapia da fala.
+        </div>
+      </div>
+
+      <div class="sectionContainer">
+        <div>
+          <img src="images/pedras.jpeg" class="sectionImage">
+        </div>
+        <div class="sectionText">
+          <h2>A nossa Equipa</h2>
+          A nossa equipa é constituída por terapeutas e técnicos de várias áreas, mas temos em comum o respeito pela natureza e complexidade do Ser Humano, praticando a gentileza, compaixão e respeito pela dignidade de cada um.
+        </div>
+      </div>
+
+
 
 </body>
 </html>
