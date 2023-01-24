@@ -10,27 +10,27 @@
     @font-face { font-family: Cabin; src: url('fonts/cabin-regular-ttf'); } 
     @font-face { font-family: Cabin; font-weight: bold; src: url('fonts/cabin-medium-ttf'); } 
 
-    body { color: #494f49; font-family: 'Cabin', sans-serif; text-align: center; }
+    body { color: #494f49; font-family: 'Cabin', sans-serif; text-align: center; margin: 0 0 0 0;}
     h1 { font-size: 2.7em; }
     h2 { font-size: 2.5em; }
     h3 { font-weight: bold; font-size: 1.5em; }
     p { font-size: 1.2em; }
-    .containerLogo { margin-top: 40px; }
+    .containerLogo { margin-top: 40px; margin-bottom: 40px; }
     .imageLogo { width: 100%; max-width: 800px; display: block; margin-left: auto; margin-right: auto; }
     .sectionContainer { display: grid; grid-template-columns: 1fr 1fr 1fr; column-gap: 5px; }
     .sectionImage { max-width: 500px; }
     .titleText { margin-left: 30%; margin-right: 30% }
     .regularText { text-align: left; }
     .sectionText { text-align: left; }
-    .footer { background-color: #494f49; color: white; margin-left: 0; margin-right: 0;}
+    .footer { background-color: #494f49; color: white; height: 300px; margin-top: 40px; margin-bottom: 40px;}
 
-    .dropbtn { background-color: #04AA6D; color: white; padding: 16px; font-size: 16px; border: none; }
+    .psibutton { cursor: pointer; background-color: #04AA6D; color: white; padding: 16px; font-size: 16px; font-weight: bold; border: none; border-radius: 8px; margin-right:5px}
     .dropdown { position: relative; display: inline-block; }
-    .dropdown-content { display: none; position: absolute; background-color: #f1f1f1; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1; }
-    .dropdown-content a { color: black; padding: 12px 16px; text-decoration: none; display: block; }
-    .dropdown-content a:hover {background-color: #ddd;}
-    .dropdown:hover .dropdown-content {display: block;}
-    .dropdown:hover .dropbtn {background-color: #3e8e41;}
+    .dropdown:hover .dropdown-content { display: block; }
+    .dropdown-content { display: none; position: absolute; color: white; background-color: #494f49; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1; }
+    .dropdown-content a { color: white; padding: 12px 16px; text-decoration: none; display: block; }
+    .dropdown-link:hover a { background-color: #04AA6D;}
+    
 </style>
 
 <body>
@@ -42,26 +42,28 @@
     </div>
 
     <div class="dropdown">
-        <button class="dropbtn">PSI EQUILIBRA</button>
+        <button class="psibutton">PSI EQUILIBRA</button>
         <div class="dropdown-content">
-          <a href="#">Missão, Visão e Valores</a>
+            <div class="dropdown-link"><a href="valores.html">Missão, Visão e Valores</a></div>
         </div>
     </div>
 
     <div class="dropdown">
-        <button class="dropbtn">PSICOLOGIA</button>
+        <button class="psibutton">PSICOLOGIA</button>
         <div class="dropdown-content">
-          <a href="#">Consulta da Criança</a>
-          <a href="#">Consulta do Adolescente</a>
+            <div class="dropdown-link"><a href="consulta_crianca.html">Consulta da Criança</a></div>
+            <div class="dropdown-link"><a href="consulta_adolescente.html" class="drowndown-link">Consulta do Adolescente</a></div>
+            <div class="dropdown-link"><a href="consulta_adulto.html">Consulta do Adulto</a></div>
+            <div class="dropdown-link"><a href="consulta_casal.html">Consulta de Terapia de Casal</a></div>          
         </div>
     </div>
 
     <div class="dropdown">
-        <button class="dropbtn">A EQUIPA</button>
+        <a href="equipa.html"><button class="psibutton">A EQUIPA</button></a>
     </div>
-
+    
     <div class="dropdown">
-        <button class="dropbtn">CONTACTOS</button>
+        <a href="contactos.html"><button class="psibutton">CONTACTOS</button></a>
     </div>
 
     <div>
@@ -89,6 +91,11 @@
           As nossas consultas visam ir de encontro às necessidades apresentadas por cada pessoa, pretendendo não apenas atuar numa vertente remediativa, mas igualmente proporcionando um espaço de prevenção, potenciando as qualidades e competências de cada pessoa.
 
           Neste sentido, os nossos terapeutas trabalham num contexto multidisciplinar, combinando saberes.
+
+          <div class="dropdown">
+            <a href="psicologia.html"><button class="psibutton">Psicologia</button></a>
+        </div>
+    
         </div>
       </div>
 
@@ -101,6 +108,10 @@
           Num conceito de Equilíbrio, a Saúde Integrativa vem dar o seu contributo na visão de um corpo como um só, analisando e intervindo no bem-estar de cada indivíduo, respeitando a sua especificidade e o seu equilíbrio no seu contexto.
 
           A saúde integrativa apresenta-se nas suas vertentes de psicomotricidade, babyoga e playoga, nutrição e terapia da fala.
+
+          <div class="dropdown">
+            <a href="saude_integrativa.html"><button class="psibutton">Saúde Integrativa</button></a>
+        </div>   
         </div>
       </div>
 
@@ -111,6 +122,11 @@
         <div class="sectionText">
           <h2>A nossa Equipa</h2>
           A nossa equipa é constituída por terapeutas e técnicos de várias áreas, mas temos em comum o respeito pela natureza e complexidade do Ser Humano, praticando a gentileza, compaixão e respeito pela dignidade de cada um.
+
+          <div class="dropdown">
+            <a href="equipa.html"><button class="psibutton">A Equipa</button></a>
+          </div>
+   
         </div>
       </div>
 
