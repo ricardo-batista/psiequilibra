@@ -1,55 +1,72 @@
 <!doctype html>
 <html lang="pt-PT">
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>PsiEquilibra</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="shortcut icon" type="image/png" href="favicon.png">
 </head>
 
 <style>
-    @font-face { font-family: Cabin; src: url('fonts/cabin-regular-ttf'); } 
-    @font-face { font-family: Cabin; font-weight: bold; src: url('fonts/cabin-medium-ttf'); } 
+  @font-face { font-family: Cabin; src: url('fonts/cabin-regular'); } 
+  @font-face { font-family: Cabin; font-weight: bold; src: url('fonts/cabin-medium-ttf'); } 
+/*
+  * { box-sizing: border-box; }
+  body { color: #494f49; font-family: 'Cabin', sans-serif; text-align: center; margin: 0 0 0 0;}
 
-    body { color: #494f49; font-family: 'Cabin', sans-serif; text-align: center; margin: 0 0 0 0;}
-    h1 { font-size: 2.7em; }
-    h2 { font-size: 2.5em; }
-    h3 { font-weight: bold; font-size: 1.5em; }
-    p { font-size: 1.2em; }
-    .containerLogo { margin-top: 40px; margin-bottom: 40px; }
-    .imageLogo { width: 100%; max-width: 800px; display: block; margin-left: auto; margin-right: auto; }
-    .sectionContainer { display: grid; grid-template-columns: 1fr 1fr 1fr; column-gap: 5px; }
-    .sectionImage { max-width: 500px; }
-    .titleText { margin-left: 30%; margin-right: 30% }
-    .regularText { text-align: left; }
-    .sectionText { text-align: left; }
-    .footer { background-color: #494f49; color: white; height: 300px; margin-top: 40px; margin-bottom: 40px;}
+  .header { margin-top: 40px; margin-bottom: 40px }
+  .imageHeader { width: 100%; max-width: 800px; display: block; margin-left: auto; margin-right: auto; }
 
-    .psibutton { cursor: pointer; background-color: #04AA6D; color: white; padding: 16px; font-size: 16px; font-weight: bold; border: none; border-radius: 8px; margin-right:5px}
-    .dropdown { position: relative; display: inline-block; }
-    .dropdown:hover .dropdown-content { display: block; }
-    .dropdown-content { display: none; position: absolute; color: white; background-color: #494f49; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1; }
-    .dropdown-content a { color: white; padding: 12px 16px; text-decoration: none; display: block; }
-    .dropdown-link:hover a { background-color: #04AA6D;}
+  .psibutton { cursor: pointer; padding: 16px; font-size: 16px; font-weight: bold; border: none; border-radius: 8px; margin-right:5px}    
+  .psibuttonSelected { background-color: #04AA6D; color: white; }    
+  .psibuttonUnselected { background-color: white; color: black; }
+  .psibuttonUnselected:hover { background-color: #04AA6D; color: white }
+  .dropdown { position: relative; display: inline-block; }
+  .dropdown:hover .dropdown-content { display: block; }
+  
+  .dropdown-content { display: none; position: absolute; color: white; background-color: #494f49; border-radius: 8px; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1; }
+  .dropdown-content a { color: white; padding: 12px 16px; text-decoration: none; display: block; white-space: nowrap; text-align: left; }
+  .dropdown-link:hover a { background-color: #04AA6D; border-radius: 8px; }
     
+  .slogan { font-size: 2.7em; font-weight: bold; margin: 40px; }
+  .imageTop { width: 100%; max-width: 1024px; display: block; margin-left: auto; margin-right: auto; }
+
+  .titleText { margin-left: 20%; margin-right: 20%; margin-top: 40px; font-size: 1.7em; font-weight: normal; }
+  .subtitleText { margin-left: 20%; margin-right: 20%; margin-top: 40px; font-size: 1.3em; font-weight: lighter; text-align: justify; text-justify: inter-word; }
+
+  .sectionContainer { min-height:450px; display: grid; grid-template-columns: 0.5fr 0.5fr; column-gap: 5px; margin-top: 40px; margin-bottom: 40px; margin-left: 10%; margin-right: 10%; }
+  .sectionCenteredImageContainer { width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; }
+  .sectionImage { width: 100%; }
+
+  .sectionTextContainer { text-align: left; margin-left: 40px;  }
+  .sectionTitleText { text-align: left; font-size: 1.7em; font-weight: bold; margin-bottom: 40px; }
+  .sectionText { text-align: left; font-size: 1.3em; }   
+    
+  .footer { background-color: #494f49; color: white; height: 300px; margin-top: 40px; margin-bottom: 40px;}
+*/    
 </style>
 
 <body>
-
-    <div class="containerLogo">
+<!--
+    <div class="header">
         <a href="https://psiequilibra.pt/">
-            <img src="images/psiequilibra.jpg" class="imageLogo" />
+            <img src="images/psiequilibra.jpg" class="imageHeader" />
         </a>
     </div>
 
+    <button type="button" class="btn btn-primary">Primary</button>
+
+
     <div class="dropdown">
-        <button class="psibutton">PSI EQUILIBRA</button>
+        <button class="psibutton psibuttonSelected">PSI EQUILIBRA</button>
         <div class="dropdown-content">
             <div class="dropdown-link"><a href="valores.html">Missão, Visão e Valores</a></div>
         </div>
     </div>
 
     <div class="dropdown">
-        <button class="psibutton">PSICOLOGIA</button>
+        <button class="psibutton psibuttonUnselected">PSICOLOGIA</button>
         <div class="dropdown-content">
             <div class="dropdown-link"><a href="consulta_crianca.html">Consulta da Criança</a></div>
             <div class="dropdown-link"><a href="consulta_adolescente.html" class="drowndown-link">Consulta do Adolescente</a></div>
@@ -59,78 +76,79 @@
     </div>
 
     <div class="dropdown">
-        <a href="equipa.html"><button class="psibutton">A EQUIPA</button></a>
+        <a href="equipa.html"><button class="psibutton psibuttonUnselected">A EQUIPA</button></a>
     </div>
     
     <div class="dropdown">
-        <a href="contactos.html"><button class="psibutton">CONTACTOS</button></a>
+        <a href="contactos.html"><button class="psibutton psibuttonUnselected">CONTACTOS</button></a>
     </div>
 
-    <div>
-      <h1>Naturalmente, consigo!</h1>
+
+    <div class="slogan">Naturalmente, consigo!</div>
+
+    <div class="containerTopImage">
+        <img src="images/meditacao.jpeg" class="imageTop" />
     </div>
 
-    <div class="containerLogo">
-        <img src="images/meditacao.jpeg" class="imageLogo" />
-    </div>
-
-    <br>
 
     <div class="titleText">
-      <h3>Acreditamos que devemos olhar para cada pessoa como um todo. Um Ser Humano, nas suas várias partes, mas que só poderá encontrar o seu bem-estar, num equilíbrio psicobiofisiológico.</h3>
-      <p>Com respeito pela humanidade de cada um, e proporcionando um ambiente seguro, faz igualmente parte da nossa prática, respeitar a natureza humana, procurando respostas, dentro do possível, o mais naturais e em harmonia com o nosso corpo.</p>
-      <p>É igualmente fundamental para nós atuarmos em conjunto, seja através de parceiros locais, quer através de parcerias com outras clínicas, que consideramos especialistas na sua prática e e que possam complementar os nossos serviços.</p>
+      Acreditamos que devemos olhar para cada pessoa como um todo. Um Ser Humano, nas suas várias partes, mas que só poderá encontrar o seu bem-estar, num equilíbrio psicobiofisiológico.
+    </div>
+    
+    <div class="subtitleText">
+        Com respeito pela humanidade de cada um, e proporcionando um ambiente seguro, faz igualmente parte da nossa prática, respeitar a natureza humana, procurando respostas, dentro do possível, o mais naturais e em harmonia com o nosso corpo.
+    </div>
+
+    <div class="subtitleText">
+        É igualmente fundamental para nós atuarmos em conjunto, seja através de parceiros locais, quer através de parcerias com outras clínicas, que consideramos especialistas na sua prática e e que possam complementar os nossos serviços.
+    </div>
+
+    
+    <div class="sectionContainer">
+
+      <div class="sectionTextContainer">
+        <div class="sectionTitleText">Psicologia</div>
+        <div class="sectionText">
+          As nossas consultas visam ir de encontro às necessidades apresentadas por cada pessoa, pretendendo não apenas atuar numa vertente remediativa, mas igualmente proporcionando um espaço de prevenção, potenciando as qualidades e competências de cada pessoa.
+          Neste sentido, os nossos terapeutas trabalham num contexto multidisciplinar, combinando saberes.
+        </div>
+        <div class="dropdown">
+          <a href="psicologia.html"><button class="psibutton psibuttonSelected">Psicologia</button></a>
+        </div>
+      </div>  
+      
+      <div class="sectionCenteredImageContainer"><img class="sectionImage" src="images/empatia.jpeg"></div>
     </div>
 
     <div class="sectionContainer">
-        <div>
-          <img src="images/empatia.jpeg" class="sectionImage">
-        </div>
+      <div class="sectionCenteredImageContainer"><img src="images/margarida.jpeg" class="sectionImage"></div>
+      
+      <div class="sectionTextContainer">
+        <div class="sectionTitleText">Saúde Integrativa</div>
         <div class="sectionText">
-          <h2>Psicologia</h2>
-          As nossas consultas visam ir de encontro às necessidades apresentadas por cada pessoa, pretendendo não apenas atuar numa vertente remediativa, mas igualmente proporcionando um espaço de prevenção, potenciando as qualidades e competências de cada pessoa.
-
-          Neste sentido, os nossos terapeutas trabalham num contexto multidisciplinar, combinando saberes.
-
-          <div class="dropdown">
-            <a href="psicologia.html"><button class="psibutton">Psicologia</button></a>
-        </div>
-    
-        </div>
-      </div>
-
-      <div class="sectionContainer">
-        <div>
-          <img src="images/margarida.jpeg" class="sectionImage">
-        </div>
-        <div class="sectionText">
-          <h2>Saúde Integrativa</h2>
           Num conceito de Equilíbrio, a Saúde Integrativa vem dar o seu contributo na visão de um corpo como um só, analisando e intervindo no bem-estar de cada indivíduo, respeitando a sua especificidade e o seu equilíbrio no seu contexto.
-
           A saúde integrativa apresenta-se nas suas vertentes de psicomotricidade, babyoga e playoga, nutrição e terapia da fala.
-
-          <div class="dropdown">
-            <a href="saude_integrativa.html"><button class="psibutton">Saúde Integrativa</button></a>
+        </div>
+        <div class="dropdown">
+          <a href="saude_integrativa.html"><button class="psibutton psibuttonSelected">Saúde Integrativa</button></a>
         </div>   
-        </div>
       </div>
+    </div>
 
-      <div class="sectionContainer">
-        <div>
-          <img src="images/pedras.jpeg" class="sectionImage">
-        </div>
+    <div class="sectionContainer">
+      <div class="sectionTextContainer">
+        <div class="sectionTitleText">A nossa Equipa</div>
         <div class="sectionText">
-          <h2>A nossa Equipa</h2>
           A nossa equipa é constituída por terapeutas e técnicos de várias áreas, mas temos em comum o respeito pela natureza e complexidade do Ser Humano, praticando a gentileza, compaixão e respeito pela dignidade de cada um.
-
-          <div class="dropdown">
-            <a href="equipa.html"><button class="psibutton">A Equipa</button></a>
-          </div>
-   
+        </div>
+        <div class="dropdown">
+          <a href="equipa.html"><button class="psibutton psibuttonSelected">A Equipa</button></a>
         </div>
       </div>
+      <div class="sectionCenteredImageContainer"><img src="images/pedras.jpeg" class="sectionImage"></div>
+    </div>
 
-      <div class="footer">
+    <div class="footer">
         Psi Equilibra
         Psicologia e Saúde Integrativa
         Os nossos contactos são:
@@ -147,7 +165,7 @@
         Sexta-feira 9:00 am – 8:00 pm
         Sábado 9:00 am – 1:00 pm
         Domingo Fechado
-      </div>
-
+    </div>
+-->
 </body>
 </html>
