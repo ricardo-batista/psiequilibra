@@ -15,20 +15,26 @@
   body { color: #494f49; font-family: 'Cabin', sans-serif; text-align: center; margin: 0 0 0 0;}
 
   .headerImageContainer { margin-top: 40px; max-width: 740px; }
-  .menuContainer { margin-top: 40px; }
+  .buttonMenuContainer { margin-top: 40px; display: none; }
+  .fullMenuContainer { margin-top: 40px; display: block; }
   .sloganContainer { font-size: 2.7em; font-weight: bold; margin: 40px; }
+  .mainTitle { font-size: 2.8em; font-weight: bold; margin: 40px; }
+  .mainImage { width: 100%; max-width: 1024px; display: block; margin-left: auto; margin-right: auto; }
+  .subTitle { margin-top: 40px; font-size: 1.7em; font-weight: normal; }
+  .subText { margin-top: 40px; font-size: 1.3em; font-weight: lighter; text-align: justify; text-justify: inter-word; }
 
+
+  @media only screen and (max-width: 600px) {
+    .fullMenuContainer { display: none; }
+    .buttonMenuContainer { display: block; }
+    .mainTitle { font-size: 2.1em; }
+    .subTitle { font-size: 1.3em; }
+    .subText { font-size: 1em; }
+  }
+  
+  
 /*
 
-  
-  
-
-
-
-
-  * { box-sizing: border-box; }
-  
-  
   .psibutton { cursor: pointer; padding: 16px; font-size: 16px; font-weight: bold; border: none; border-radius: 8px; margin-right:5px}    
   .psibuttonSelected { background-color: #04AA6D; color: white; }    
   .psibuttonUnselected { background-color: white; color: black; }
@@ -40,11 +46,9 @@
   .dropdown-content a { color: white; padding: 12px 16px; text-decoration: none; display: block; white-space: nowrap; text-align: left; }
   .dropdown-link:hover a { background-color: #04AA6D; border-radius: 8px; }
     
-  .slogan { font-size: 2.7em; font-weight: bold; margin: 40px; }
-  .imageTop { width: 100%; max-width: 1024px; display: block; margin-left: auto; margin-right: auto; }
+  
+  
 
-  .titleText { margin-left: 20%; margin-right: 20%; margin-top: 40px; font-size: 1.7em; font-weight: normal; }
-  .subtitleText { margin-left: 20%; margin-right: 20%; margin-top: 40px; font-size: 1.3em; font-weight: lighter; text-align: justify; text-justify: inter-word; }
 
   .sectionContainer { min-height:450px; display: grid; grid-template-columns: 0.5fr 0.5fr; column-gap: 5px; margin-top: 40px; margin-bottom: 40px; margin-left: 10%; margin-right: 10%; }
   .sectionCenteredImageContainer { width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; }
@@ -62,13 +66,29 @@
 
   <div class="container text-center">
     
-    <div class="row justify-content-md-center">
+    <div class="row justify-content-center">
       <div class="col headerImageContainer">
         <a href="https://psiequilibra.pt/"><img src="images/psiequilibra.jpg" class="img-fluid" /></a>
       </div>
     </div>
 
-    <div class="row justify-content-md-center menuContainer">
+    <div class="row justify-content-center buttonMenuContainer">
+      <div class="col">
+        <div class="btn-group">
+          <button type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            Menu
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">PsiEquilibra</a></li>
+            <li><a class="dropdown-item" href="#">Psicologia</a></li>
+            <li><a class="dropdown-item" href="#">A Equipa</a></li>
+            <li><a class="dropdown-item" href="#">Contactos</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center fullMenuContainer">
       <div class="col">
 
         <div class="btn-group">
@@ -107,32 +127,32 @@
 
       </div>
     </div>
-<!--
-    <div class="row justify-content-md-center">
+
+    <div class="row justify-content-center">
       <div class="col">
-        <div class="slogan">Naturalmente, consigo!</div>
+        <div class="mainTitle">Naturalmente, consigo!</div>
       </div>
     </div>
 
-    <div class="row justify-content-md-center">
+    <div class="row justify-content-center">
       <div class="col">
-        <img src="images/meditacao.jpeg" class="imageMain" />
+        <img src="images/meditacao.jpeg" class="mainImage" />
       </div>
     </div>
 
-    <div class="row justify-content-md-center">
-      <div class="col">
-        
+    <div class="row justify-content-center subTitle">
+      <div class="col-8">        
         Acreditamos que devemos olhar para cada pessoa como um todo. Um Ser Humano, nas suas várias partes, mas que só poderá encontrar o seu bem-estar, num equilíbrio psicobiofisiológico.
       </div>
     </div>
-    <div class="row justify-content-md-center">
-      <div class="col">
+    <div class="row justify-content-center subText">
+      <div class="col-8">
         Com respeito pela humanidade de cada um, e proporcionando um ambiente seguro, faz igualmente parte da nossa prática, respeitar a natureza humana, procurando respostas, dentro do possível, o mais naturais e em harmonia com o nosso corpo.
+        <br><br>
         É igualmente fundamental para nós atuarmos em conjunto, seja através de parceiros locais, quer através de parcerias com outras clínicas, que consideramos especialistas na sua prática e e que possam complementar os nossos serviços.
       </div>
     </div>
-
+<!--
     <div class="row justify-content-md-center">
       <div class="col">
         Psicologia
