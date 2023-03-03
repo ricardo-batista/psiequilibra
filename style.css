@@ -14,10 +14,13 @@ body { color: #494f49; font-family: 'Cabin', sans-serif; text-align: center; mar
 .mainImage { width: 100%; max-width: 1024px; display: block; margin-left: auto; margin-right: auto; }
 .subTitle { font-size: 1.7em; font-weight: normal; }
 .subText { font-size: 1.3em; font-weight: lighter; text-align: justify; text-justify: inter-word; }
-.subSectionTextContainer { text-align: left; }
-.subSectionTitle { font-size: 1.7em; font-weight: normal; }
-.subSectionImage { width: 100%; }
-.footer { background-color: #494f49; color: white; height: 300px; margin-top: 40px; margin-bottom: 40px;  }
+.subSectionTitle { font-size: 1.7em; font-weight: bold; }
+.subSectionImage { width: 100%; max-width: 500px; }
+.subSectionImageContainer {  display: flex; align-items: center; flex-wrap: wrap;}
+.subSectionTextContainer { font-size: 1.2em; font-weight: 0; text-align: left; }
+.footer { background-color: #494f49; color: white; margin-top: 40px; margin-bottom: 40px; padding: 40px; text-align: left; }
+.footerText { font-size: 1.3em; }
+.footerTitle { font-size: 1.7em; }
 
 @media only screen and (max-width: 768px) {
   .fullMenuContainer { display: none; }
