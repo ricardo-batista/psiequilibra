@@ -21,7 +21,7 @@ a { color: #62a062; text-decoration: underline; }
 .subSectionTextContainer { font-size: 1.2em; text-align: left; }
 .contactsText { font-size: 1.2em; text-align: left; }
 .textJustified { text-align: justify; }
-.profileImage { }
+.profileImage { width: 240px; }
 .profileName { font-size: 1.5em; font-weight: bold; }
 .profileTitle { font-size: 1.2em; }
 .profileText { font-size: 0.9em;  text-align: justify; }
