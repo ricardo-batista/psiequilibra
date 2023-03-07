@@ -22,7 +22,7 @@ a { color: #62a062; text-decoration: underline; }
 .contactsText { font-size: 1.2em; text-align: left; }
 .textJustified { text-align: justify; }
 .profileImage { max-width: 300px; }
-.profileName { font-size: 1.3em; font-weight: bold; }
+.profileName { font-size: 1.5em; font-weight: bold; }
 .profileTitle { font-size: 1.2em; }
 .profileText { font-size: 0.9em;  text-align: justify; }
 .footer { background-color: #494f49; color: white; margin-top: 40px; margin-bottom: 40px; padding: 40px; text-align: left; }
@@ -32,10 +32,11 @@ a { color: #62a062; text-decoration: underline; }
 @media only screen and (max-width: 768px) {
   .fullMenuContainer { display: none; }
   .buttonMenuContainer { display: block; }
-  .mainTitle { font-size: 2.1em; }
+  .mainTitle { font-size: 2.0em; }
   .subTitle { font-size: 1.6em; font-weight: 500; }
   .subSectionTitle { font-size: 1.5em; }
-  .subSectionTextContainer { font-size: 1em; }
+  .subSectionTextContainer { font-size: 1em; text-align: justify; }
   .subText { font-size: 1em; font-weight: normal; }
+  .contactsText { font-size: 1em; font-weight: normal; }
   .footerText { font-size: 1.2em; }
 }
