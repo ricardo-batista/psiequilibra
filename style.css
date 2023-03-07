@@ -37,4 +37,5 @@ a { color: #62a062; text-decoration: underline; }
   .subSectionTitle { font-size: 1.5em; }
   .subSectionTextContainer { font-size: 1em; }
   .subText { font-size: 1em; font-weight: normal; }
+  .footerText { font-size: 1.2em; }
 }
